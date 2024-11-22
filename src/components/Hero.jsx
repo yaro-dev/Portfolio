@@ -38,7 +38,7 @@ export default function Hero() {
 
                     <div className="home__data">
                         <h1 className="home__title">
-                            Hi, I'am Yaro
+                            Hi, I'm Yaro
                         </h1>
                         {
 
