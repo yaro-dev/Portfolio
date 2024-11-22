@@ -12,7 +12,7 @@ export default function About() {
             </span>
 
             <div className="about__container container grid">
-                <img src="src/assets/me.jpg" alt="" className="about__img"></img>
+                <img src="/img/me.jpg" alt="" className="about__img"></img>
 
                 <div className="about__data">
                     <p className="about__description">
