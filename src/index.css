@@ -738,7 +738,7 @@ width: 75%;
   .services__container{
     display: flex !important;
     flex-direction: column;
-    
+    align-items: center;
   }
 }
 
@@ -750,6 +750,7 @@ width: 75%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
   transition: .3s;
   max-width: 211px;
+  min-width: 211px;
 }
 
 .services__content:hover {
