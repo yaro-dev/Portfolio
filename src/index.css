@@ -738,6 +738,7 @@ width: 75%;
   .services__container{
     display: flex !important;
     flex-direction: column;
+    
   }
 }
 
@@ -748,6 +749,7 @@ width: 75%;
   border-radius: .25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
   transition: .3s;
+  max-width: 211px;
 }
 
 .services__content:hover {
@@ -924,7 +926,6 @@ width: 75%;
   font-size: 13px;
 
 }
-
 
 
 .portfolio__description{
@@ -1212,6 +1213,7 @@ input:-webkit-autofill{
 
   .services__content {
     padding-right: 3.5rem;
+    max-width: 238px !important;
 
   }
 
@@ -1479,13 +1481,7 @@ input:-webkit-autofill{
     position: relative;
   }
 
-  .swiper-button-prev {
-    left: -3.5rem;
-  }
 
-  .swiper-button-next {
-    right: -3.5rem;
-  }
 
  
 
