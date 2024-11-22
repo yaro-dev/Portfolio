@@ -530,6 +530,16 @@ section.skills{
   min-height: 380px;
 }
 
+@media(max-width:600px){
+  .skills__container{
+    padding-bottom: 14px;
+  }
+
+  .skills__list{
+    padding-bottom: 16px;
+  }
+}
+
 .skills__header {
   width: 100%;
   display: flex;
