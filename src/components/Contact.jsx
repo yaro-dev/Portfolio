@@ -57,17 +57,17 @@ export default function Contact() {
                     <div className="contact__inputs grid">
                         <div className="contact__content">
                             <label htmlFor="name" className="contact__label">Name</label>
-                            <input type="text" name="user_name" className="contact__input" required />
+                            <input type="text" name="from_name" className="contact__input" required />
                         </div>
 
                         <div className="contact__content">
                             <label htmlFor="email" className="contact__label">Email</label>
-                            <input type="email" name="user_email" className="contact__input" required />
+                            <input type="email" name="from_email" className="contact__input" required />
                         </div>
 
                         <div className="contact__content">
                             <label htmlFor="project" className="contact__label">Project</label>
-                            <input type="text" name="user_project" className="contact__input" required />
+                            <input type="text" name="from_project" className="contact__input" required />
                         </div>
 
                         <div className="contact__content">
