@@ -25,16 +25,12 @@ export default function Header() {
     }
     
     useEffect(() => {
-        const navLink = document.querySelectorAll('.nav__link')
-
-        function linkAction() {
-            const navMenu = document.getElementById('nav-menu')
-            // When we click on each nav__link, we remove the show-menu class
-            navMenu.classList.remove('show-menu')
-        }
-        navLink.forEach(n => n.addEventListener('click', linkAction))
-        
+        const navMenu = document.getElementById('nav-menu');
+        const navToggle = document.getElementById('nav-toggle');
+        const navClose = document.getElementById('nav-close');
+        const navLinks = document.querySelectorAll('.nav__link');
         const themeButton = document.getElementById('theme-button');
+
         const darkTheme = 'dark-theme';
         const iconTheme = 'uil-sun';
 
@@ -42,13 +38,19 @@ export default function Header() {
         const selectedTheme = localStorage.getItem('selected-theme');
         const selectedIcon = localStorage.getItem('selected-icon');
 
-        const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
-        const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun';
+        const getCurrentTheme = () =>
+            document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+        const getCurrentIcon = () =>
+            themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun';
 
         // Si hay un tema previamente seleccionado, aplícalo
         if (selectedTheme) {
-            document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
-            themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme);
+            document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](
+                darkTheme
+            );
+            themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](
+                iconTheme
+            );
         }
 
         // Función para alternar el tema
@@ -59,16 +61,29 @@ export default function Header() {
             localStorage.setItem('selected-icon', getCurrentIcon());
         };
 
-        // Agrega el evento de click al botón
-        if (themeButton) {
-            themeButton.addEventListener('click', toggleTheme);
-        }
+        /*===== MENU SHOW =====*/
+        const showMenu = () => navMenu.classList.add('show-menu');
 
-        // Cleanup para eliminar el event listener al desmontar el componente
+        /*===== MENU HIDDEN =====*/
+        const hideMenu = () => navMenu.classList.remove('show-menu');
+
+        /*===== REMOVE MENU MOBILE =====*/
+        const linkAction = () => {
+            navMenu.classList.remove('show-menu');
+        };
+
+        // Agrega los listeners si los elementos existen
+        if (navToggle) navToggle.addEventListener('click', showMenu);
+        if (navClose) navClose.addEventListener('click', hideMenu);
+        navLinks.forEach(link => link.addEventListener('click', linkAction));
+        if (themeButton) themeButton.addEventListener('click', toggleTheme);
+
+        // Cleanup event listeners on unmount
         return () => {
-            if (themeButton) {
-                themeButton.removeEventListener('click', toggleTheme);
-            }
+            if (navToggle) navToggle.removeEventListener('click', showMenu);
+            if (navClose) navClose.removeEventListener('click', hideMenu);
+            navLinks.forEach(link => link.removeEventListener('click', linkAction));
+            if (themeButton) themeButton.removeEventListener('click', toggleTheme);
         };
     }, []);
 
