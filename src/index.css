@@ -846,7 +846,6 @@ width: 75%;
 }
 
 .portfolio__content {
-  padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: start !important;
@@ -854,16 +853,27 @@ width: 75%;
 
 .portfolio__data{
   text-align: left;
+  padding: 0 1.5rem;
 }
 
 .Project__Screenshot{
   /* width: 265px; */
-  border-radius: .5rem;
+ margin-bottom: 10px;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
   width: 100% !important;
   max-height: 431px;
   height: auto;
   
   object-fit: cover;
+}
+
+@media (max-width:600px){
+  .Project__Screenshot{
+   object-fit: contain;
+   display: block;
+  min-height: ;
+  }
 }
 
 .portfolio__title {
@@ -940,7 +950,7 @@ width: 75%;
 
 .swiper-slide {
   border-radius: .5rem;
-  padding-top: 24px;
+
   padding-bottom: 24px;
   background: var(--container-color);
   /* Center slide text vertically */
