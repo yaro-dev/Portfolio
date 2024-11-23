@@ -857,14 +857,12 @@ width: 75%;
 }
 
 .Project__Screenshot{
-  /* width: 265px; */
  margin-bottom: 10px;
   border-top-left-radius: .5rem;
   border-top-right-radius: .5rem;
   width: 100% !important;
   max-height: 431px;
   height: auto;
-  
   object-fit: cover;
 }
 
@@ -893,8 +891,8 @@ width: 75%;
 .swiper-button-prev::after,
 .swiper-button-next::after {
   content: '' ;
-  @media (max-width:586px){
-    font-size: 1.5rem !important;
+  @media (max-width:600px){
+    font-size: 1.3rem !important;
   }
 }
 

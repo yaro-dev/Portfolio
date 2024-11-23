@@ -59,7 +59,7 @@ function App() {
         </Swiper>
 
       </section>
-    
+
       <Contact></Contact>
 
     </>
