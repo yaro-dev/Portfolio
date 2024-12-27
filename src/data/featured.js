@@ -1,5 +1,14 @@
 export const db = [
     {
+        id: 7,
+        name: 'Xarky',
+        image: 'project_07',
+        description: 'Design & Wordpress Custom Landing Page for dental pediatric clinic',
+        link: 'https://olympia.mijo.dev/',
+        tech: 'Wordpress, SASS, PHP, JS, Gutenberg blocks',
+        collab: 'Yaro Dev'
+    },
+    {
         id: 6,
         name: 'Olympia',
         image: 'project_06',
