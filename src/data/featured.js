@@ -4,7 +4,7 @@ export const db = [
         name: 'Xarky',
         image: 'project_07',
         description: 'Design & Wordpress Custom Landing Page for dental pediatric clinic',
-        link: 'https://olympia.mijo.dev/',
+        link: 'https://xarky.com',
         tech: 'Wordpress, SASS, PHP, JS, Gutenberg blocks',
         collab: 'Yaro Dev'
     },
