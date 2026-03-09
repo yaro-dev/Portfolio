@@ -530,7 +530,7 @@ section.skills{
   min-height: 380px;
 }
 
-@media(max-width:600px){
+/* @media(max-width:600px){
   .skills__container{
     padding-bottom: 14px;
   }
@@ -648,6 +648,97 @@ width: 75%;
 
 .skills__webpack, .skills__mix{
   width: 95%;
+} */
+
+/*==================== BENTO BOX SKILLS ====================*/
+.skills__bento-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 0 1.5rem;
+  margin-top: var(--mb-2);
+}
+
+.skills__bento-card {
+  background-color: var(--container-color);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: .3s;
+}
+
+.skills__bento-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.bento-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.bento-title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+.bento-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.bento-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  cursor: default;
+  transition: color .3s, border-color .3s;
+}
+
+.bento-tag-icon {
+  font-size: 1.15rem; /* Hace que el ícono sea ligeramente más grande que el texto */
+  transition: color .3s;
+}
+
+.bento-tag:hover {
+  border-color: var(--first-color);
+  color: var(--first-color);
+}
+
+/* Breakpoints para pantallas medianas y grandes */
+@media screen and (min-width: 768px) {
+  .skills__bento-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .bento-frontend {
+    grid-column: span 2;
+  }
+  
+  .bento-creative {
+    grid-column: span 1;
+  }
+  
+  .bento-backend {
+    grid-column: span 1;
+  }
+  
+  .bento-ai {
+    grid-column: span 1;
+  }
+  
+  .bento-cms {
+    grid-column: span 1;
+  }
 }
 
 /*==================== QUALIFICATION ====================*/
@@ -1495,7 +1586,7 @@ input:-webkit-autofill{
  
 
   .portfolio__data {
-    //width: 420px;
+    width: 420px;
   }
 
   .contact__form {
